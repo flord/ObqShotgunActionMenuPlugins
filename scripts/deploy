@@ -1,0 +1,34 @@
+#!/usr/bin/python
+
+import compileall
+import os
+import subprocess
+import sys
+
+
+BASE_DEPLOY_PATH = '/mnt/online1/deployment/oblique'
+
+
+def main(args):
+	# Rsync stuff from working copy to deployment location
+	repoPath = os.path.dirname(os.path.dirname(args[0]))
+	srcPath = os.path.join(repoPath, 'src/')
+	tgtPath = os.path.join(BASE_DEPLOY_PATH, "software", "obqProtocolHandler")
+	extensions = ['--exclude=*.' + ext for ext in ['sql']]
+	cmd = "rsync -vrt --delete --delete-excluded %s %s %s" % (' '.join(extensions), srcPath, tgtPath)
+	_sysCall(cmd)
+
+	# Tag the deployment location so that it is rsynced to local systems
+	os.utime(os.path.join(BASE_DEPLOY_PATH, '.quickTimeStamp.txt'), None)
+
+	return 0
+
+
+def _sysCall(cmd):
+	"""Perform a system call"""
+	p = subprocess.Popen(cmd, shell=True)
+	return os.waitpid(p.pid, 0)[1]
+
+
+if __name__ == '__main__':
+	sys.exit(main(sys.argv))
