@@ -8,9 +8,9 @@ import subprocess
 from fuzzLib.managerClient import Api
 
 from shotgun_api3 import Shotgun
-SERVER_PATH = "https://oblique.shotgunstudio.com" #your server path here
+SERVER_PATH = "" #your server path here
 SCRIPT_USER = 'GoodForEdit' #your script name
-SCRIPT_KEY =  '294c92a24667f3f03208999e577231499fc4f3ac' #your key here
+SCRIPT_KEY =  '' #your key here
 sg = Shotgun(SERVER_PATH, SCRIPT_USER, SCRIPT_KEY)
 
 # Install menu in Shotgun.

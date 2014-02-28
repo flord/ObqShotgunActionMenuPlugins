@@ -8,9 +8,9 @@ from fuzzLib.managerClient import Api
 
 # Shotgun API
 from shotgun_api3 import Shotgun
-SERVER_PATH = "https://oblique.shotgunstudio.com" #your server path here
+SERVER_PATH = "" #your server path here
 SCRIPT_USER = 'UploadToInterdubs' #your script name
-SCRIPT_KEY =  '9e41f3fcd8ba2fe81ec0fc9ad4c89546ca91cd29' #your key here
+SCRIPT_KEY =  '' #your key here
 sg = Shotgun(SERVER_PATH, SCRIPT_USER, SCRIPT_KEY)
 
 # Interdubs API

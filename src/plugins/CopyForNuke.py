@@ -4,9 +4,9 @@ import logging
 import sys
 import win32clipboard
 from shotgun_api3 import Shotgun
-SERVER_PATH = "https://oblique.shotgunstudio.com" #your server path here
+SERVER_PATH = "" #your server path here
 SCRIPT_USER = 'CopyForNuke' #your script name
-SCRIPT_KEY =  'cc926719167d9d3b9134154f83fc07ffcb4acd9e' #your key here
+SCRIPT_KEY =  '' #your key here
 sg = Shotgun(SERVER_PATH, SCRIPT_USER, SCRIPT_KEY)
 
 # Install menu in Shotgun.

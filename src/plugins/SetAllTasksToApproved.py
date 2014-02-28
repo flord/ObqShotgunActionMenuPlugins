@@ -8,9 +8,9 @@ from fuzzLib.managerClient import Api
 
 # Shotgun API
 from shotgun_api3 import Shotgun
-SERVER_PATH = "https://oblique.shotgunstudio.com" #your server path here
+SERVER_PATH = "" #your server path here
 SCRIPT_USER = 'SetAllTasksToApproved' #your script name
-SCRIPT_KEY =  'b28caf868cd4e0ff3d5171672398f38d5f3f75bd' #your key here
+SCRIPT_KEY =  '' #your key here
 sg = Shotgun(SERVER_PATH, SCRIPT_USER, SCRIPT_KEY)
 
 

@@ -5,9 +5,9 @@ import win32clipboard
 import os,time,shutil,datetime,subprocess
 from fuzzLib.managerClient import Api
 from shotgun_api3 import Shotgun
-SERVER_PATH = "https://oblique.shotgunstudio.com" #your server path here
+SERVER_PATH = "" #your server path here
 SCRIPT_USER = 'SendToClientApproval' #your script name
-SCRIPT_KEY =  'ea59d098a178ff230640b2d8710ef179757fff85' #your key here
+SCRIPT_KEY =  '' #your key here
 sg = Shotgun(SERVER_PATH, SCRIPT_USER, SCRIPT_KEY)
 
 # Install menu in Shotgun.
