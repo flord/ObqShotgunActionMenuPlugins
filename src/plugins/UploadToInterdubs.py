@@ -16,7 +16,7 @@ sg = Shotgun(SERVER_PATH, SCRIPT_USER, SCRIPT_KEY)
 # Interdubs API
 from interdubs_api import Interdubs
 IDX_PATH = 'http://www.interdubs.com/api/'
-IDX_KEY  = 'GA7BzxYKwcBE3dm7CGH9d'
+IDX_KEY  = 'insert your key here'
 idx = Interdubs(IDX_PATH, IDX_KEY)
 
 
